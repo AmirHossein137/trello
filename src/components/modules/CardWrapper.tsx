@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "@/app/page.module.css";
+import styles from "@/assets/css/cardWrapper.module.css";
 import { IoMdClose } from "react-icons/io";
 
 interface Props {
@@ -20,9 +20,9 @@ const CardWrapper: React.FC<Props> = ({ onAdd }) => {
   };
 
   return (
-    <div style={{ width: "250px" }}>
+    <div className={styles.wrapper} style={{ width: "272px", minWidth: "272px", flexShrink: 0 }}>
       {isAdding ? (
-        <div style={{ background: "#ebecf0", padding: "15px 8px", borderRadius: "8px" }}>
+        <div className={styles.card}>
           <input
             type="text"
             placeholder="Enter a list title..."
@@ -37,14 +37,7 @@ const CardWrapper: React.FC<Props> = ({ onAdd }) => {
           <div style={{ display: "flex", gap: "8px" }}>
             <button
               onClick={handleAdd}
-              style={{
-                background: "#5aac44",
-                color: "white",
-                padding: "6px 12px",
-                borderRadius: "4px",
-                border: "none",
-                cursor: "pointer",
-              }}
+              className={styles.addBtn}
             >
               Add list
             </button>

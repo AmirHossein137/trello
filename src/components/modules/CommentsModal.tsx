@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { dbClient } from "@/lib/db";
 import type { Comment } from "@/types/kanban";
-import styles from "@/app/CommentsModal.module.css";
+import styles from "@/assets/css/CommentsModal.module.css";
 
 interface CommentsModalProps {
   taskId: number;

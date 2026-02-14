@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "@/app/page.module.css";
+import styles from "@/assets/css/page.module.css";
 import { IoMdClose } from "react-icons/io";
 
 interface Props {

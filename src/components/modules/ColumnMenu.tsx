@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import styles from "@/app/ColumnMenu.module.css";
+import styles from "@/assets/css/ColumnMenu.module.css";
 import { IoMdClose } from "react-icons/io";
 import { FaChevronLeft } from "react-icons/fa";
 

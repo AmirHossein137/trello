@@ -6,7 +6,7 @@ import TaskAdder from "@/components/modules/TaskAdder";
 import ColumnMenu from "@/components/modules/ColumnMenu";
 import { dbClient } from "@/lib/db";
 import type { Column, Task } from "@/types/kanban";
-import styles from "@/app/page.module.css";
+import styles from "@/assets/css/page.module.css";
 import { RxDotsHorizontal } from "react-icons/rx";
 import CommentsModal from "../modules/CommentsModal";
 import {

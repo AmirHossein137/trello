@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 30px;
   min-height: 100vh;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: rgb(46, 126, 175);
   transition: background-color 0.2s ease-in;
 }
@@ -15,24 +15,37 @@
   font-size: 1.3rem;
 }
 
-.addItemButton {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  color: rgb(255, 255, 255);
-  text-align: left;
-  border-radius: 0.2rem;
-  background-color: rgba(0, 0, 0, 0.12);
-  transition: background-color 0.2s ease-in;
-  cursor: pointer;
-  display: flex;
-  border: none;
-}
-
 .itemWrapper {
   display: flex;
   gap: 16px;
-  align-items: flex-start; /* تغییر از stretch به flex-start */
+  align-items: flex-start;
   align-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  /* Custom scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.itemWrapper::-webkit-scrollbar {
+  height: 12px;
+}
+
+.itemWrapper::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.itemWrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.itemWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .cards {
@@ -46,7 +59,7 @@
   padding: 0.8rem;
   background-color: rgb(223, 225, 230);
   border-radius: 0.2rem;
-  overflow-y: auto; /* اضافه کردن scroll برای محتوای زیاد */
+  overflow-y: auto;
 }
 
 .wrapperTitle {
@@ -133,16 +146,6 @@
   background: rgb(193, 199, 208);
 }
 
-.inputs {
-  width: 100%;
-  background-color: white;
-  border: none;
-  padding: 4px 8px;
-  resize: none;
-  margin-bottom: 10px;
-  color: black;
-  border-radius: 8px;
-}
 
 .textaare::placeholder {
   color: #a3a3a3;
@@ -161,10 +164,4 @@
 
 .createCard:hover {
   background: rgb(81, 152, 57);
-}
-
-.close {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
 }
