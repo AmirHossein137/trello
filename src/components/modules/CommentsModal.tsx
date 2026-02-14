@@ -12,11 +12,11 @@ interface CommentsModalProps {
   onClose: () => void;
 }
 
-const CommentsModal: React.FC<CommentsModalProps> = ({ 
-  taskId, 
+const CommentsModal: React.FC<CommentsModalProps> = ({
+  taskId,
   taskTitle,
-  isOpen, 
-  onClose 
+  isOpen,
+  onClose,
 }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -51,14 +51,14 @@ const CommentsModal: React.FC<CommentsModalProps> = ({
 
   const formatDate = (timestamp: number) => {
     const date = new Date(timestamp);
-    return date.toLocaleString('en-US', {
-      month: '2-digit',
-      day: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
+    return date.toLocaleString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
     });
   };
 
@@ -69,13 +69,15 @@ const CommentsModal: React.FC<CommentsModalProps> = ({
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <h2>Comments for {taskTitle}</h2>
         <button className={styles.closeBtn} onClick={onClose} />
-        
+
         <div className={styles.commentsList}>
           {comments.map((c) => (
             <div key={c.id} className={styles.commentItem}>
               <div className={styles.commentHeader}>
                 <span className={styles.commentAuthor}>You</span>
-                <span className={styles.commentTime}>· {formatDate(c.createdAt)}</span>
+                <span className={styles.commentTime}>
+                  · {formatDate(c.createdAt)}
+                </span>
               </div>
               <div className={styles.commentContent}>{c.content}</div>
             </div>
@@ -88,7 +90,7 @@ const CommentsModal: React.FC<CommentsModalProps> = ({
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Write a comment..."
             onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey) {
+              if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
                 addComment();
               }

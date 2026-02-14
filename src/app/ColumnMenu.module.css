@@ -1,0 +1,94 @@
+.menu {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  z-index: 1000;
+}
+
+.header {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+}
+
+.header > span {
+  font-size: 14px;
+  color: rgb(107, 119, 140);
+  padding: 10px 0;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #5e6c84;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: rgba(9, 30, 66, 0.08);
+}
+
+.menuItems {
+  padding: 8px 0;
+}
+
+.menuItem {
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #172b4d;
+  transition: background-color 0.2s;
+  display: block;
+}
+
+.menuItem:hover {
+  background-color: rgba(9, 30, 66, 0.04);
+}
+
+.deleteCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.deleteCard span {
+  color: rgb(64, 66, 75);
+}
+
+.deleteCard button {
+  background-color: rgb(176, 70, 50);
+  box-shadow: rgb(110, 47, 26) 0px 1px 0px 0px;
+  padding: 10px 0;
+  border: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.back {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
