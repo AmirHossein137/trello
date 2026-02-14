@@ -1,0 +1,170 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  background-color: rgb(46, 126, 175);
+  transition: background-color 0.2s ease-in;
+}
+
+.title {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.addItemButton {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+  display: flex;
+  border: none;
+}
+
+.itemWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start; /* تغییر از stretch به flex-start */
+  align-content: flex-start;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  max-height: 83vh;
+  width: 16rem;
+  margin: 0px 0.5rem;
+  padding: 0.8rem;
+  background-color: rgb(223, 225, 230);
+  border-radius: 0.2rem;
+  overflow-y: auto; /* اضافه کردن scroll برای محتوای زیاد */
+}
+
+.wrapperTitle {
+  border-color: transparent;
+  color: rgb(64, 66, 75);
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.dotsBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.titleInput {
+  background-color: white;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+.titleInput::placeholder {
+  color: #a3a3a3;
+}
+
+.inputTitle {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  border-color: transparent;
+}
+
+.taskWrapper {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.taskWrapper h3 {
+  color: rgb(64, 66, 75);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.commentsWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comments {
+  display: flex;
+  justify-content: end;
+  background: #ddd;
+  padding: 4px 8px;
+  border: none;
+  color: rgb(23, 43, 77);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.comments:hover {
+  background: rgb(193, 199, 208);
+}
+
+.inputs {
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 4px 8px;
+  resize: none;
+  margin-bottom: 10px;
+  color: black;
+  border-radius: 8px;
+}
+
+.textaare::placeholder {
+  color: #a3a3a3;
+}
+
+.createCard {
+  background: #5aac44;
+  box-shadow: rgb(63, 111, 33) 0px 1px 0px 0px;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.createCard:hover {
+  background: rgb(81, 152, 57);
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
